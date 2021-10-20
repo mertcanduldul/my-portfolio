@@ -14,8 +14,10 @@ import {
   MenuCommand,
   MenuDivider, Box, Button, Image
 } from "@chakra-ui/react"
+import Navigation from './Navigation';
 
-export default function header() {
+
+export default function header({ children }) {
   return (
     <Box>
       <Box position="relative">
@@ -63,27 +65,7 @@ export default function header() {
                 </Grid>
               </Grid.Container>
             </div>
-            <Box float="right" position="relative" right={120} top={10}>
-              <Menu>
-                <MenuButton as={Button} rightIcon={<HamburgerMenu />}>
-                  MENÜ
-                </MenuButton>
-                <MenuList>
-                  <MenuItem minH="48px">
-                    <Package /><Spacer />
-                    <Link href="/"><a>Anasayfa</a></Link>
-                  </MenuItem>
-                  <MenuItem minH="40px">
-                    <Code /><Spacer />
-                    <Link href="/project"><a>Projelerim</a></Link>
-                  </MenuItem>
-                  <MenuItem minH="40px">
-                    <Airplay /><Spacer />
-                    <Link href="/desk"><a>Masam</a></Link>
-                  </MenuItem>
-                </MenuList>
-              </Menu>
-            </Box>
+            <Navigation/>
           </Container>
         </div>
       </Box>

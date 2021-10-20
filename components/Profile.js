@@ -4,7 +4,6 @@ import { Box, Container, Flex, Text } from '@chakra-ui/layout'
 import { Button, Grid, Row, Spacer } from '@nextui-org/react'
 import React from 'react'
 import { GitHub, Instagram, Linkedin, Twitter } from 'react-feather'
-import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 
@@ -21,8 +20,8 @@ export default function Profile() {
                                         <Image
                                          borderRadius="3xl"
                                             width="200px"
-                                            src="http://localhost:3000/profile.jpg"
-                                            alt="Segun Adebayo"
+                                            src="/profile.jpg"
+                                            alt="Mert Can Düldül"
                                         />
                                     </Flex>
                                     <Flex textAlign="center" display="block" position="relative" top={5}>
