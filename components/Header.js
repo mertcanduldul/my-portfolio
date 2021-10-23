@@ -1,30 +1,23 @@
+import React from 'react';
 import Link from 'next/link'
-import { Container, Grid, Spacer, Text } from '@nextui-org/react';
+import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css';
-import { MapPin, Mail, User, Book, Menu as HamburgerMenu, Package, Code, Airplay } from 'react-feather';
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuIcon,
-  MenuCommand,
-  MenuDivider, Box, Button, Image
-} from "@chakra-ui/react"
-import Navigation from './Navigation';
+const Navigation = dynamic(() => import('./Navigation'), { ssr: false });
+
+import { Container, Grid, Text } from '@nextui-org/react';
+import { MapPin, Mail, User, Book } from 'react-feather';
+import { Box } from '@chakra-ui/layout';
 
 
-export default function header({ children }) {
+
+export default function Header({ children }) {
   return (
     <Box>
       <Box position="relative">
         <div className={styles.header}>
           <Container>
             <div className={styles.headingWrapper}>
-              <Grid.Container gap={2} justify="center">
+              <Grid.Container>
                 <Grid xs={12} md={6} lg={3}>
                   <div className={styles.info}>
                     <MapPin className={styles.icon} width={30} />
@@ -54,7 +47,7 @@ export default function header({ children }) {
                     </div>
                   </div>
                 </Grid>
-                <Grid xs={12} md={6} lg={3}>
+                <Grid xs={9} md={6} lg={3} >
                   <div className={styles.info}>
                     <Book className={styles.icon} width={30} />
                     <div className={styles.rightArea}>
@@ -63,9 +56,12 @@ export default function header({ children }) {
                     </div>
                   </div>
                 </Grid>
+                <Grid xs={12} md={10} lg={11} />
+                <Grid xs={1} md={2} lg={1}>
+                  <Navigation />
+                </Grid>
               </Grid.Container>
             </div>
-            <Navigation/>
           </Container>
         </div>
       </Box>
