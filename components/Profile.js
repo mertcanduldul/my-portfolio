@@ -1,7 +1,7 @@
 
 import { Image } from '@chakra-ui/image'
 import { Box, Container, Flex, Text } from '@chakra-ui/layout'
-import { Button, Grid, Row, Spacer } from '@nextui-org/react'
+import { Button, Grid, Row, Spacer, Link } from '@nextui-org/react'
 import React from 'react'
 import { GitHub, Instagram, Linkedin, Twitter } from 'react-feather'
 import styles from '../styles/Home.module.css'
@@ -18,7 +18,7 @@ export default function Profile() {
                                 <Box>
                                     <Flex justifyContent="center">
                                         <Image
-                                         borderRadius="3xl"
+                                            borderRadius="3xl"
                                             width="200px"
                                             src="/profile.jpg"
                                             alt="Mert Can Düldül"
@@ -33,12 +33,12 @@ export default function Profile() {
                                     <Flex display="block" textAlign="center">
                                         <Text fontSize="xl"><b>Born : </b>13 ŞUBAT 1998</Text>
                                         <Text fontSize="xl"><b>E-Mail : </b>mertcanduldul@gmail.com</Text>
-                                        <Text fontSize="xl"><b>Status : </b>Intern at iŞNet</Text>
+                                        <Text fontSize="xl"><b>Status : </b>Intern at <a style={{ textDecoration: 'underline' }} href="https://isnet.net.tr/">iŞNet</a></Text>
                                     </Flex>
                                 </Box>
                                 <Box position="relative" top={20} justifyContent="center" display="inline-block">
                                     <Flex>
-                                        <Button color="dark" shadow icon={<GitHub />} auto /><Spacer />
+                                        <Link href="https://github.com/mduldul"><Button color="dark" shadow icon={<GitHub />} auto /><Spacer /></Link>
                                         <Button color="primary" shadow icon={<Linkedin />} auto /><Spacer />
                                         <Button color="error" shadow icon={<Instagram />} auto /><Spacer />
                                         <Button color="primary" shadow icon={<Twitter />} auto />
@@ -51,5 +51,6 @@ export default function Profile() {
             </div>
             <div style={{ position: 'absolute', backgroundColor: 'white', width: '100%', height: '200px', bottom: 0, left: 0, zIndex: 8 }}><Spacer /></div>
         </Container>
+
     )
 }
