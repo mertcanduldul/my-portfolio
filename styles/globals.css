@@ -9,11 +9,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
 li {
   list-style-type: none;
   display: inline-block;

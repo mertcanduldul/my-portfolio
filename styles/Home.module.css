@@ -16,11 +16,9 @@
 }
 
 .info {
-  margin-bottom: 10px;
-}
-
-.rightArea {
-  margin-left: 45px
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
 }
 
 .icon {
@@ -32,4 +30,3 @@
   line-height: 1.1;
   font-weight: 900;
 }
-
