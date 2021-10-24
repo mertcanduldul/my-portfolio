@@ -28,7 +28,7 @@ export default function Navigation({ children }) {
         return windowSize;
     }
     return (
-        <Box position="relative" top={4} pb={useWindowSize().width >= '960' ? 0 : 20}>
+        <Box position="relative" pb={useWindowSize().width >= '960' ? 0 : 20}>
             <Menu placement="bottom-start">
                 <MenuButton as={Button} rightIcon={<HamburgerMenu />} colorScheme="orange">
                     MENÜ

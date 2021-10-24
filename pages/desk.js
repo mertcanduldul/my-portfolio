@@ -5,7 +5,7 @@ import { Container, Grid, Text } from "@nextui-org/react";
 export default function desk({ children }) {
     return (
         <Container>
-            <Box bg="gray.50" py={[10, 20]}>
+            <Box bg="light:white dark:black" py={[10, 20]}>
                 <Box textAlign="center">
                     <Text size={40} style={{ fontFamily: 'Courier', textDecoration: 'underline' }}>DESK</Text>
                     <Text size={16} style={{ fontFamily: 'Courier' }}>Equipment that I use a lot in my daily life</Text>
@@ -48,8 +48,8 @@ export default function desk({ children }) {
                     </Grid.Container>
                 </Box>
             </Box>
-            <Box mt={10} textAlign="center">
-                <Text style={{ fontFamily: 'Courier' }}>You can access the source codes of this website on Github.</Text>
+            <Box mb={10} textAlign="center" bg="light:white dark:black">
+                <Text style={{fontFamily:'Courier'}} color="light:dark dark:white">You can access the source codes of this website on Github.</Text>
             </Box>
         </Container>
 

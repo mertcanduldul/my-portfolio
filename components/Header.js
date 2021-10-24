@@ -4,19 +4,19 @@ import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css';
 const Navigation = dynamic(() => import('./Navigation'), { ssr: false });
 
-import { Container, Grid, Text } from '@nextui-org/react';
-import { MapPin, Mail, User, Book } from 'react-feather';
+import { Container, Grid, Text, Switch, Button } from '@nextui-org/react';
+import { MapPin, Mail, User, Book, Sun, Moon } from 'react-feather';
 import { Box } from '@chakra-ui/layout';
-
-
+import { useColorMode } from '@chakra-ui/color-mode';
 
 export default function Header({ children }) {
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
     <Box>
       <Box position="relative">
         <div className={styles.header}>
           <Container>
-            <div className={styles.headingWrapper}>
+            <Box className={styles.headingWrapper}>
               <Grid.Container>
                 <Grid xs={12} md={6} lg={3}>
                   <div className={styles.info}>
@@ -56,12 +56,19 @@ export default function Header({ children }) {
                     </div>
                   </div>
                 </Grid>
-                <Grid xs={12} md={10} lg={11} />
-                <Grid xs={1} md={2} lg={1}>
+                <Grid xs={12} md={3} lg={12} justify="space-between">
                   <Navigation />
+                  <Switch
+                    checked={colorMode === "light" ? false : true}
+                    size="xlarge"
+                    color="dark"
+                    iconOn={<Moon />}
+                    iconOff={<Sun style={{ backgroundColor: 'orangered', borderRadius: 10 }} />}
+                    onChange={toggleColorMode}
+                  />
                 </Grid>
               </Grid.Container>
-            </div>
+            </Box>
           </Container>
         </div>
       </Box>

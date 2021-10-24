@@ -43,12 +43,12 @@ export default function Project() {
     ]
     return (
         <Container>
-            <Box bg="gray.50" borderRadius={10}>
+            <Box bg="light:white dark:black" borderRadius={10} paddingBottom={[20,0]}>
                 <Box textAlign="center">
-                    <Text size={40} style={{ fontFamily: "Courier", textDecoration: 'underline' }}>Projects</Text>
-                    <Text size={16} style={{ fontFamily: "Courier" }}>I share the open sources of the projects I have developed with you.</Text>
+                    <Text size={40} style={{ fontFamily: "Courier", textDecoration: 'underline' }} color="light:black dark:white">Projects</Text>
+                    <Text size={16} style={{ fontFamily: "Courier" }} color="light:black dark:white">I share the open sources of the projects I have developed with you.</Text>
                 </Box>
-                <Box padding={10}>
+                <Box padding={[0,10]}>
                     <Grid.Container justify="center">
                         {
                             projetctList.map((item, index) => (
