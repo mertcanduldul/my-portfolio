@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/layout';
-import { Card, Grid, Container, Row, Text, Col, Link, Button, Spacer } from '@nextui-org/react';
+import { Card, Grid, Container, Text, Link } from '@nextui-org/react';
 import React from 'react'
 
 export default function Project() {
@@ -43,9 +43,9 @@ export default function Project() {
     ]
     return (
         <Container>
-            <Box bg="gray.200" borderRadius={10}>
+            <Box bg="gray.50" borderRadius={10}>
                 <Box textAlign="center">
-                    <Text size={40} style={{ fontFamily: "Courier", textDecoration: 'underline' }}>PROJELERIM</Text>
+                    <Text size={40} style={{ fontFamily: "Courier", textDecoration: 'underline' }}>Projects</Text>
                     <Text size={16} style={{ fontFamily: "Courier" }}>I share the open sources of the projects I have developed with you.</Text>
                 </Box>
                 <Box padding={10}>
@@ -53,7 +53,7 @@ export default function Project() {
                         {
                             projetctList.map((item, index) => (
                                 <Grid key={item.id} style={{ marginBottom: 10 }} xs={12} md={6} lg={4}>
-                                    <Card width="330px" height="230px" color="dark" bordered>
+                                    <Card width="330px" height="252px" color="dark" bordered>
                                         <Box display="flex" justifyContent="space-between">
                                             <Text h4 color="white" style={{ marginBottom: 10 }}>{item.title}</Text>
                                             <Text style={{ fontSize: 12, backgroundColor: 'darkgray', color: '#fff', borderRadius: 10, padding: 5, alignSelf: 'center' }}>{item.developmentLanguage}</Text>

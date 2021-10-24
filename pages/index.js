@@ -15,7 +15,7 @@ export default function Home({ children }) {
           </div>
         </Container>
       </Box>
-      <Box mt={3} p={100} bg="white" borderRadius="10">
+      <Box mt={3} p={[5,5,50]} bg="white" borderRadius="10">
         <Container>
           <Grid.Container justify="space-between">
             <Grid xs={12} md={2}>
