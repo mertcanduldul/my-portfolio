@@ -33,7 +33,7 @@ export default function Profile() {
                                     <Flex display="block" textAlign="center">
                                         <Text fontSize="xl"><b>Born : </b>13 ŞUBAT 1998</Text>
                                         <Text fontSize="xl"><b>E-Mail : </b>mertcanduldul@gmail.com</Text>
-                                        <Text fontSize="xl"><b>Status : </b>Intern at <a style={{ textDecoration: 'underline' }} href="https://isnet.net.tr/">iŞNet</a></Text>
+                                        <Text fontSize="xl"><b>Status : </b>Software Developer Intern at <a style={{ textDecoration: 'underline' }} href="https://isnet.net.tr/">iŞNet</a></Text>
                                     </Flex>
                                 </Box>
                                 <Box position="relative" top={20} justifyContent="center" display="inline-block">

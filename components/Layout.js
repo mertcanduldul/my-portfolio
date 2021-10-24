@@ -6,7 +6,7 @@ import Header from './Header'
 
 export default function Layout({ children }) {
     return (
-        <Box bg="orange.100" pb={5}>
+        <Box pb={5}>
             <Header />
             <Box position="relative" top={50}>
                 <Container fluid>
